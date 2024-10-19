@@ -12,30 +12,33 @@ article.about {
 }
 
 /* ---------------------------------------------img------------------------------------------------------------- */
-article.about figure{
+article.about figure {
     margin: 2rem 2rem 0 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     position: relative;
     width: 30%;
+    height: calc(100vh - 190px);
 }
 
 article.about figure img {
-    position:absolute;
+    position: fixed;
     max-width: 250px;
     width: 100%;
     border-radius: 3px;
     border: 2px solid rgb(175, 175, 175);
 }
+
 #profile-img-bottom {
     opacity: .6;
     filter: brightness(.1) contrast(.1) hue-rotate(30deg) saturate(1%);
-    box-shadow: 15px 15px 0px 0px rgba(128, 128, 128,.7);
+    box-shadow: 15px 15px 0px 0px rgba(128, 128, 128, .7);
 
-    transform: translate(1rem,1rem);
+    transform: translate(1rem, 1rem);
     transition: transform .2s ease-in-out .1s, filter .2s linear, opacity .2s linear;
 }
+
 #profile-img-top {
     opacity: 1;
     transition: transform .2s ease-in-out .1s, filter .2s linear, opacity .2s linear;
@@ -50,38 +53,46 @@ article.about figure img {
 }
 
 .about-caption h2 {
-  text-align: left;
-  font-size: 4rem;
+    text-align: left;
+    font-size: 4rem;
 }
-.about-caption h2 span { /*--- :: ---*/
+
+.about-caption h2 span {
+    /*--- :: ---*/
     color: rgba(129, 129, 129, .6);
     font-size: 5rem;
-  }
+}
+
 .about-caption p {
     font-size: 1rem;
-     text-align: justify;
+    text-align: justify;
 }
+
 .about-caption p:nth-of-type(1) {
     margin: 1rem 0 2rem 3rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid rgba(129, 129, 129, .6);
 }
+
 .about-caption p:nth-of-type(2) {
     margin: 1rem 0 2rem 3rem;
     padding: 1rem 0 1rem 1rem;
     border-left: 1px solid rgba(129, 129, 129, .6);
 }
+
 /* ----------------------------------------skill-------------------------------------------------------------------------- */
 .about-caption {
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
 }
+
 .about-caption h4 {
     text-align: left;
     margin-left: 3rem;
     font-size: 1.5rem;
 }
+
 .about-caption ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(129px, 1fr));
@@ -89,77 +100,98 @@ article.about figure img {
     grid-row-gap: .5rem;
     list-style-position: inside;
     list-style: none;
-    margin:0 4rem 0 4rem;
+    margin: 0 4rem 0 4rem;
     font-size: 1.1rem;
     margin-bottom: 1rem;
 }
-.about-caption ul li::before { /* bullet color */
+
+.about-caption ul li::before {
+    /* bullet color */
     content: "\2022";
     color: rgba(129, 129, 129, .6);
     font-size: 2rem;
     font-weight: bold;
-    display: inline-block; 
+    display: inline-block;
     width: 1.2rem;
     transform: translate(1px, 5px);
     transition: all 150ms ease-in-out;
-  }
+}
 
 .about-caption ul li:hover::before {
     color: #4CFFC3;
 }
 
-  /* ----------------------------------------------------------------- @media -------------------------------------------------------------- */
+/* ----------------------------------------------------------------- @media -------------------------------------------------------------- */
 @media screen and (max-width: 996px) {
     figure.fade-img {
         margin-left: 2rem;
     }
-    article.about figure{
+
+    article.about figure {
         width: 40%;
     }
+
     .about-caption {
         width: 60%;
     }
+
     .about-caption ul {
         font-size: 1rem;
     }
-  }
+}
 
 @media screen and (max-width: 790px) {
     .img-and-caption {
         flex-direction: column;
     }
-    article.about figure{
+
+    article.about figure {
         justify-content: center;
         width: 100%;
         height: 30rem;
+        margin-bottom: 2rem;
     }
+    article.about figure img {
+        position: absolute;
+    }
+
     .about-caption {
         width: 100%;
         margin: 1rem 0 0 0;
 
     }
-  }
+}
+
+
 @media screen and (max-width: 500px) {
-    article.about figure{
+    article.about figure {
         height: 25rem;
     }
+
     article.about figure img {
         max-width: 200px;
     }
-  }
+}
+
 @media screen and (max-width: 380px) {
     .about-caption h2 {
         font-size: 3rem;
-      }
-  }
+    }
+}
+
 @media screen and (max-width: 394px) {
     .about-caption h2 {
         font-size: 3rem;
-      }
+    }
+
     .about-caption ul {
         font-size: 1.1rem;
         grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-      }
+    }
 }
-  /* ----------------------------------------------------------------- @media -------------------------------------------------------------- */
-  
+
+/* ----------------------------------------------------------------- @media -------------------------------------------------------------- */
+
+li {
+    cursor: default;
+}

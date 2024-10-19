@@ -16,7 +16,7 @@
   <meta name="description"
     content="Hello, my name is Prakasit or you can call me Farm. I really enjoy and have fun with programming. I will have new projects in the future. I hope you will like my work. Have a good day :)" />
   <meta name="robots" content="index, follow">
-  <title>Prakasit | Front-end developer</title>
+  <title>Prakasit | Full-Stack developer</title>
 
   <link rel="icon" type="image/x-icon" href="./images/icon-PL.png">
 
@@ -73,7 +73,7 @@
     <article class="first-page">
       <span>Hello,</span>
       <h1>I'm Prakasit.</h1>
-      <span>Web developer, Front-end developer.</span>
+      <span>Web developer, Full-Stack developer.</span>
       <button class="button-49" role="button" onclick="FadeButton49()">view portfolio</button>
     </article>
   </div>
@@ -111,8 +111,8 @@
       <article class="home" id="home">
         <h2><span>#</span>Welcome</h2>
         <div id="left-line"></div>
-        <p>Hi, I'm so happy that you visited my web portfolio. This is the first website I created, and there will be
-          many other works to follow. I hopefully you will enjoy my work</p>
+        <p>Welcome to my web portfolio. I’m excited to share my work with you. This is the first website I’ve developed,
+          and I look forward to adding many more projects in the future. I hope you enjoy exploring my work.</p>
         <p>You can click the label below, to see the other pages. </p>
         <ul id="home-nav">
           <li><span onclick="about_button_click()">About me</span></li>
@@ -132,16 +132,17 @@
 
           <div class="about-caption">
             <h2><span>::</span>About Me</h2>
-            <p>&emsp;&emsp;&emsp;My name is Prakasit Lertprakitsin. I'm born and live in Thailand. I've been interested
-              in computers since I was a kid, that led me to enter a vocational college. I learned basic coding skill
-              from Hatyai Technical College. they teach me about microcontroller and when I graduated I'm also
-              interested in website development.<br /><br />&emsp;&emsp;&emsp;That made me learn many things that I
-              never did when I was in college. I spend most of my time to creating my work. to develop myself and this
-              website is one of them.</p>
+            <p>&emsp;&emsp;&emsp;My name is Prakasit Lertprakitsin, and I was born and raised in Thailand. I’ve had a
+              passion for computers since childhood, which led me to pursue studies at Hatyai Technical College, where
+              I
+              gained foundational coding skills and knowledge in microcontrollers.<br /><br />&emsp;&emsp;&emsp;After
+              graduation, I developed a strong interest in web development, expanding my skill set beyond what I
+              learned
+              in college. I now dedicate much of my time to creating and refining projects, including this website, as
+              part of my ongoing professional growth.</p>
             <h4>This is my skill</h4>
             <ul>
-              <li><span>HTML</span></li>
-              <li><span>CSS/SCSS</span></li>
+              <li><span>HTML/SCSS</span></li>
               <li><span>JavaScript</span></li>
               <li><span>TypeScript</span></li>
               <li><span>Basic C/C++</span></li>
@@ -155,12 +156,16 @@
               <li><span>Bootstrap</span></li>
               <li><span>Tailwind</span></li>
               <li><span>React</span></li>
+              <li><span>NextJS</span></li>
               <li><span>Angular</span></li>
               <li><span>Ionic</span></li>
               <li><span>Node.JS</span></li>
               <li><span>NestJS</span></li>
+              <li><span>Express</span></li>
               <li><span>MongoDB</span></li>
-              <li><span>phpMyAdmin</span></li>
+              <li><span>MySQL</span></li>
+              <li><span>PostgreSQL</span></li>
+              <li><span>Git</span></li>
             </ul>
             <p>I still learning new skills every day. and develop myself to be better than before.</p>
           </div>
@@ -194,49 +199,45 @@
       <article class="resume" id="resume">
         <h2><span>.</span>Resume</h2>
 
-        <img loading="lazy" src="./images/resume.jpg" alt="resume-img" id="zoomImg" onclick="zoomIn(event)">
+        <img loading="lazy" src="./images/resume.png" alt="resume-img" id="zoomImg" onclick="zoomIn(event)">
 
         <div class="pdf-link">
-          <a href="./images/resume.PDF" download="resume.pdf">Click to download PDF file.</a>
+          <a href="./images/resume.PDF" download="prakasit-resume.pdf">Click to download PDF file.</a>
         </div>
       </article>
 
       <!-- contact -->
       <article class="contact" id="contact">
         <h2><span>&#60;</span>Contact Me<span>&#62;</span></h2>
-        <form action="https://formsubmit.co/e0253c80f9a803a0d9972ae1fb4cb069" method="post">
+        <form onsubmit="sendEmail(event)">
           <div class="group">
-            <input type="text" name="Name" placeholder="&nbsp" required /><span class="highlight"></span><span
-              class="bar"></span>
+            <input id="nameInput" type="text" name="Name" placeholder="&nbsp" required /><span
+              class="highlight"></span><span class="bar"></span>
             <label class="text-label">Full Name</label>
           </div>
 
           <div class="group">
-            <input id="emailInput" type="text" name="Email" placeholder="&nbsp" required /><span
+            <input id="subjectInput" type="text" name="Subject" placeholder="&nbsp" required /><span
               class="highlight"></span><span class="bar"></span>
-            <label class="text-label">E-mail</label>
-          </div>
-
-          <div class="group">
-            <input type="text" name="Subject" placeholder="&nbsp" required /><span class="highlight"></span><span
-              class="bar"></span>
             <label class="text-label">Subject</label>
           </div>
 
           <div class="group">
-            <textarea id="hold-textarea" type="textarea" name="Message" placeholder="&nbsp" required></textarea><span
-              class="highlight"></span><span class="bar" id="bar-textarea"></span>
+            <textarea id="messageInput" type="textarea" name="Message" placeholder="&nbsp"
+              required></textarea><span class="highlight"></span><span class="bar" id="bar-textarea"></span>
             <label class="text-label">Message</label>
 
             <div class="form-button" id="send-button">
               <span>send</span>
               <div class="icon-send"></div>
-              <button id="real-button" onclick="addHyphen()" type="submit">hide</button>
+              <button id="real-button" ype="submit">hide</button>
             </div>
             <span class="loader" id="loader"></span>
           </div>
 
         </form>
+
+        <a id="emailAnchor" style="display: none;"></a>
       </article>
     </section>
 
@@ -247,7 +248,7 @@
     </footer>
     <footer id="footer-contact">
       <div>
-        <span>Tel. 080-5410801 &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; farmconom@gmail.com</span>
+        <span>Tel. 080-5410801 &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; prakasit.lertprakitsin@gmail.com</span>
       </div>
     </footer>
   </main>
